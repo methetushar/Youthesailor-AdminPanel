@@ -1,0 +1,15 @@
+/node_modules
+public/*
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+node_modules
+package-lock.json~016621d1f649da9729891dba95b1fab57d10deea
+package-lock.json
+public/mix-manifest.json

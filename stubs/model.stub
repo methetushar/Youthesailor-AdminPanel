@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @Oshit Sutra Dhar
+ */
+
+namespace {{ namespace }};
+
+use Auth;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
+
+class {{ class }} extends Model
+{
+    use LogsActivity;
+    protected $guarded = [];
+
+
+
+
+
+    //--------------------------------------------------------
+    // LOG ACTIVITY
+    //--------------------------------------------------------
+    protected static $logAttributes = ['*'];
+    protected static $logName = '{{ class }}';
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        $name = Auth::guard('admin')->user()->name;
+        return "{$name} have {$eventName} the {{ class }}";
+    }
+}
